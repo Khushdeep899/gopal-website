@@ -7,6 +7,8 @@
 // import Projects from '../components/Projects'
 // import Skills from '../components/Skills'
 
+import Navbar from '../components/Navbar'
+
 import styles from './page.module.css'
 
 export default function Home() {
@@ -15,8 +17,31 @@ export default function Home() {
    
         <title>Gopal Drywalls</title>
 
-      <p> Test shit</p>
+
+      <Navbar />
 
     </div>
   )
 }
+
+
+
+// the correct way: 
+// import Head from 'next/head';
+// // other imports
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <Head>
+//         <title>Gopal Drywalls</title>
+//         <meta name="description" content="We do mud tape" />
+//         {/* other head elements */}
+//       </Head>
+
+//       {/* your content */}
+//       <p> Test content</p>
+//     </div>
+//   );
+// }
+
