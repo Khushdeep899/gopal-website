@@ -39,7 +39,13 @@ const Navbar = () => {
             <div>
                 <div className='flex w-full items-center justify-between'>
                 <Image src="/assets/gopal-logo.png" alt="Navigation Logo" width={80} height={50} />
+                <div className='rounded-full shadow lg shadow-gray p-3 cursor-pointer'>
                 <AiOutlineClose />
+                </div>
+                </div>
+
+                <div className='border-b border-gray-300 my-4'>
+                    <p>Seamless Finishes, Lasting Impressions.</p>
                 </div>
 
             </div>
