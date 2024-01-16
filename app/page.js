@@ -19,8 +19,8 @@ export default function Home() {
         <title>Gopal Drywalls</title>
 
 
-      <Navbar />
-        <About />
+      {/*<Navbar />*/}
+        <About/>
 
     </div>
   )
