@@ -1,0 +1,146 @@
+Index: app/page.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// index.js\n\n\n// import About from '../components/About'\n// import Contact from '../components/Contact'\n// import Main from '../components/Main'\n// import Projects from '../components/Projects'\n// import Skills from '../components/Skills'\n\nimport Navbar from '../components/Navbar'\n\nimport styles from './page.module.css'\nimport About from \"@/components/About\";\n\nexport default function Home() {\n  return (\n    <div>\n   \n        <title>Gopal Drywalls</title>\n\n\n      <Navbar />\n        <About/>\n\n    </div>\n  )\n}\n\n\n\n// the correct way: \n// import Head from 'next/head';\n// // other imports\n\n// export default function Home() {\n//   return (\n//     <div>\n//       <Head>\n//         <title>Gopal Drywalls</title>\n//         <meta name=\"description\" content=\"We do mud tape\" />\n//         {/* other head elements */}\n//       </Head>\n\n//       {/* your content */}\n//       <p> Test content</p>\n//     </div>\n//   );\n// }\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/page.js b/app/page.js
+--- a/app/page.js	(revision 08eb965d96aabc7fafd23b831a9d3e19e9ad59eb)
++++ b/app/page.js	(date 1705428043356)
+@@ -7,43 +7,40 @@
+ // import Projects from '../components/Projects'
+ // import Skills from '../components/Skills'
+ 
++// import Head from 'next/head'
++import Main from '@/components/Main'
+ import Navbar from '../components/Navbar'
+ 
+ import styles from './page.module.css'
+ import About from "@/components/About";
+ 
++
+ export default function Home() {
+   return (
++
++
+     <div>
+-   
++      {/* <Head>
+         <title>Gopal Drywalls</title>
++        </Head> */}
++
+ 
+-
++    
+       <Navbar />
++<<<<<<< HEAD
+         <About/>
++=======
++     
++      
++      <Main />
++   
++      
++>>>>>>> khushdeep1
+ 
+     </div>
++    
+   )
+ }
+ 
+ 
+ 
+-// the correct way: 
+-// import Head from 'next/head';
+-// // other imports
+-
+-// export default function Home() {
+-//   return (
+-//     <div>
+-//       <Head>
+-//         <title>Gopal Drywalls</title>
+-//         <meta name="description" content="We do mud tape" />
+-//         {/* other head elements */}
+-//       </Head>
+-
+-//       {/* your content */}
+-//       <p> Test content</p>
+-//     </div>
+-//   );
+-// }
+-
+Index: components/Navbar.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use client\"\n\nimport React, {useState} from 'react'\nimport Image from 'next/image';\nimport Link from 'next/link';\nimport {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'\nimport {FaLinkedinIn} from 'react-icons/fa'\nimport {BsFillPersonLinesFill} from 'react-icons/bs'\nimport { FaFacebook } from \"react-icons/fa\";\n\nconst Navbar = () => {\n\n    const [nav, setNav] = useState(false)\n\n    const handleNav = () => {\n        setNav(!nav)\n    }\n\n\n\n\n    return (\n\n        <div className='fixed w-full h-20 shadow-xl z-[100]'>\n            <div className='flex justify-between items-center w-full px-2 2xl:px-16'>\n                <Image src=\"/assets/gopal-logo.png\" alt=\"Navigation Logo\" width={80} height={50} />\n                <div>\n                    <ul className='hidden md:flex '>\n                        <Link href='/'>\n                            <li className='ml-10 text-sm uppercase hover:border-b'> Home </li>\n                        </Link>\n                        <Link href='/'>\n                            <li className='ml-10 text-sm uppercase hover:border-b'> About </li>\n                        </Link>\n                        <Link href='/'>\n                            <li className='ml-10 text-sm uppercase hover:border-b'> Services </li>\n                        </Link>\n                        <Link href='/'>\n                            <li className='ml-10 text-sm uppercase hover:border-b'> Projects </li>\n                        </Link>\n                        <Link href='/'>\n                            <li className='ml-10 text-sm uppercase hover:border-b'> Contact </li>\n                        </Link>\n                    </ul>\n\n                    <div onClick={handleNav} className='md:hidden'>\n\n                        <AiOutlineMenu size={25} />\n                    </div>\n                </div>\n            </div>\n\n            <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>\n                <div className={\n                    nav\n                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 transition-all'\n                        : 'fixed left-[-100%] top-0 p-10 ease-in duration-500 transition-all'}>\n                    <div>\n                        <div className='flex w-full items-center justify-between'>\n                            <Image src=\"/assets/gopal-logo.png\" alt=\"Navigation Logo\" width={80} height={50} />\n                            <div onClick={handleNav} className='rounded-full shadow lg shadow-gray p-3 cursor-pointer'>\n                                <AiOutlineClose  />\n                            </div>\n                        </div>\n\n                        <div className='border-b border-gray-300 my-4'>\n                            <p className='w-[85%] md:w-[90%] py-4'>Seamless Finishes, Lasting Impressions.</p>\n                        </div>\n                    </div>\n                    <div className='py-4 flex flex-col'>\n                        <ul className='uppercase'>\n                            <Link href='/'>\n                                <li className='py-4 text-sm'> Home </li>\n                            </Link>\n                            <Link href='/'>\n                                <li className='py-4 text-sm'> About </li>\n                            </Link>\n                            <Link href='/'>\n                                <li className='py-4 text-sm'> Services </li>\n                            </Link>\n                            <Link href='/'>\n                                <li className='py-4 text-sm'> Projects </li>\n                            </Link>\n                            <Link href='/'>\n                                <li className='py-4 text-sm'> Contact </li>\n                            </Link>\n                        </ul>\n\n                        <div className='pt-40'>\n                            <p className='uppercase tracking-widest text-[#5651e5'>\n                                Let's Connect\n                            </p>\n\n                            <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>\n\n                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>\n                                    <FaLinkedinIn />\n                                </div>\n\n                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>\n                                    <FaFacebook />\n                                </div>\n\n                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>\n                                    <AiOutlineMail />\n                                </div>\n\n                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>\n                                    <BsFillPersonLinesFill />\n                                </div>\n\n                            </div>\n\n\n                        </div>\n                    </div>\n\n                </div>\n\n            </div>\n\n\n        </div>\n    )\n}\n\nexport default Navbar
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/components/Navbar.jsx b/components/Navbar.jsx
+--- a/components/Navbar.jsx	(revision 08eb965d96aabc7fafd23b831a9d3e19e9ad59eb)
++++ b/components/Navbar.jsx	(date 1705428336941)
+@@ -27,19 +27,19 @@
+                 <div>
+                     <ul className='hidden md:flex '>
+                         <Link href='/'>
+-                            <li className='ml-10 text-sm uppercase hover:border-b'> Home </li>
++                            <li classname='ml-10 text-sm uppercase hover:border-b'> Home </li>
+                         </Link>
+                         <Link href='/'>
+-                            <li className='ml-10 text-sm uppercase hover:border-b'> About </li>
++                            <li classname='ml-10 text-sm uppercase hover:border-b'> About </li>
+                         </Link>
+                         <Link href='/'>
+-                            <li className='ml-10 text-sm uppercase hover:border-b'> Services </li>
++                            <li classname='ml-10 text-sm uppercase hover:border-b'> Services </li>
+                         </Link>
+                         <Link href='/'>
+-                            <li className='ml-10 text-sm uppercase hover:border-b'> Projects </li>
++                            <li classname='ml-10 text-sm uppercase hover:border-b'> Projects </li>
+                         </Link>
+                         <Link href='/'>
+-                            <li className='ml-10 text-sm uppercase hover:border-b'> Contact </li>
++                            <li classname='ml-10 text-sm uppercase hover:border-b'> Contact </li>
+                         </Link>
+                     </ul>
+ 
+Index: components/Main.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/components/Main.jsx b/components/Main.jsx
+new file mode 100644
+--- /dev/null	(date 1705428043356)
++++ b/components/Main.jsx	(date 1705428043356)
+@@ -0,0 +1,29 @@
++import React from 'react';
++
++const Main = () => {
++  return (
++    <div className='w-full h-screen text-center flex flex-col justify-center items-center bg-gray-100'>
++        <div className='max-w-[1240px] mx-auto p-4'>
++            <h1 className='text-4xl sm:text-5xl font-bold text-gray-800 mb-6'>
++                Premium Mud and Tape Services for Your Home
++            </h1>
++            <p className='text-lg text-gray-600 mb-4'>
++                Crafting Seamless Walls for a Perfect Finish
++            </p>
++            <p className='text-md text-gray-500 max-w-xl mx-auto'>
++                With over a decade of experience in drywall finishing, Gopal Drywalls offers professional mud and tape services that ensure a flawless finish for your home or commercial space. Our attention to detail and commitment to quality make us the preferred choice for builders and homeowners alike.
++            </p>
++            <div className='flex flex-wrap justify-center gap-6 mt-8'>
++                <button className='bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition'>
++                    Our Services
++                </button>
++                <button className='bg-transparent border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition'>
++                    Get a Quote
++                </button>
++            </div>
++        </div>
++    </div>
++  );
++}
++
++export default Main;

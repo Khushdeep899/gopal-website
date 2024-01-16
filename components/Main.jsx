@@ -11,7 +11,7 @@ const Main = () => {
                 Crafting Seamless Walls for a Perfect Finish
             </p>
             <p className='text-md text-gray-500 max-w-xl mx-auto'>
-                With over a decade of experience in drywall finishing, Gopal Drywalls offers professional mud and tape services that ensure a flawless finish for your home or commercial space. Our attention to detail and commitment to quality make us the preferred choice for builders and homeowners alike.
+                With over a decade of experience in drywall finishing, Gopal Drywall Ltd. offers professional mud and tape services that ensure a flawless finish for your home or commercial space. Our attention to detail and commitment to quality make us the preferred choice for builders and homeowners alike.
             </p>
             <div className='flex flex-wrap justify-center gap-6 mt-8'>
                 <button className='bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition'>
