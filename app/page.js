@@ -10,6 +10,7 @@
 import Navbar from '../components/Navbar'
 
 import styles from './page.module.css'
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
 
 
       <Navbar />
+        <About />
 
     </div>
   )
