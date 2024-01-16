@@ -19,7 +19,7 @@ export default function Home() {
         <title>Gopal Drywalls</title>
 
 
-      {/*<Navbar />*/}
+      <Navbar />
         <About/>
 
     </div>
