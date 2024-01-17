@@ -23,7 +23,7 @@ const About = () => {
 
             <div
                 className="hidden lg:flex w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl items-center justify-center p-4 mx-3 hover:scale-105 ease-in duration-300">
-                <Image src="/assets/logo-with-bg.png" alt="logo" className={'rounded-xl'}/>
+                <Image src="/assets/logo-with-bg.png" width={350} height={270} alt="logo" className={'rounded-xl'}/>
             </div>
 
         </div>
