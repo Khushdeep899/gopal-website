@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="463736bf-2c7a-42a8-87c7-75f32c632818" name="Changes" comment="typos in Navbar">
-      <change afterPath="$PROJECT_DIR$/components/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,17 +20,23 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hrkrns"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hrkrns&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="Khushdeep899" />
+        <option name="repository" value="gopal-website" />
+      </RepoCoordinatesHolder>
+    </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="8263abc6-d3fe-4bc7-a9c2-fb7922115694" />
-        <option name="url" value="git@github.com:Khushdeep899/gopal-website.git" />
+        <option name="url" value="https://github.com/Khushdeep899/gopal-website.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -55,7 +59,7 @@
     "Node.js.Navbar.jsx.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging hrkrn",
+    "git-widget-placeholder": "after-merge",
     "last_opened_file_path": "/Users/harkaransidhu/Desktop/My Projects/gopal-website/public/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -159,6 +163,7 @@
     <MESSAGE value="added new file Skill.jsx&#10;- About page done" />
     <MESSAGE value="merged changes of Navbar into my branch" />
     <MESSAGE value="typos in Navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="typos in Navbar" />
+    <MESSAGE value="misc files pushed" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc files pushed" />
   </component>
 </project>
