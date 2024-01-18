@@ -8,9 +8,11 @@
 // import Skills from '../components/Skills'
 
 import Navbar from '../components/Navbar'
+import Projects from '../components/Projects'
 
 import About from "@/components/About";
 import Main from "@/components/Main";
+import styles from './page.module.css'
 
 export default function Home() {
   return (
@@ -20,8 +22,12 @@ export default function Home() {
 
 
       <Navbar />
-       <Main/>
-        <About/>
+     
+      
+      <Main />
+      <Projects />
+   
+      
 
     </div>
   )
