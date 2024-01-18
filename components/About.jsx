@@ -22,10 +22,15 @@ const About = () => {
             </div>
 
             <div
+<<<<<<< HEAD
                 className="hidden lg:flex w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl items-center justify-center p-4 mx-3 hover:scale-105 ease-in duration-300 flex-col">
                 <Image src="/assets/bhinder-img.jpg" alt="logo" className={'rounded-xl shadow-xl'} width={380}
                        height={250}/>
                 <p className="pt-4">Hardharminder Singh, Director</p>
+=======
+                className="hidden lg:flex w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl items-center justify-center p-4 mx-3 hover:scale-105 ease-in duration-300">
+                <Image src="/assets/logo-with-bg.png" width={350} height={270} alt="logo" className={'rounded-xl'}/>
+>>>>>>> khushdeep1
             </div>
 
 
