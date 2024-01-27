@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
@@ -11,34 +11,52 @@ import { FaFacebook } from "react-icons/fa";
 const Navbar = () => {
 
     const [nav, setNav] = useState(false)
+    const [shadow, setShadow] = useState(false)
 
     const handleNav = () => {
         setNav(!nav)
     }
+
+    useEffect(() => {
+        const handleShadow = () => {
+            if(window.scrollY >=90 ){
+                setShadow(true)
+            } else {
+                setShadow(false)
+            }
+        };
+        window.addEventListener('scroll', handleShadow)
+    },[])
 
 
 
 
     return (
 
-        <div className='fixed w-full h-20 shadow-xl z-[100]'>
+        <div className={
+            shadow
+              ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300 bg-gray-200'
+              : 'fixed w-full h-20 z-[100] bg-gray-200'
+          }>
             <div className='flex justify-between items-center w-full px-2 2xl:px-16'>
-                <Image src="/assets/gopal-logo.png" alt="Navigation Logo" width={80} height={50} />
+                <Link href='/'>
+                <Image src="/assets/logo-no-bg.png" alt="Navigation Logo" width={350} height={100} />
+                </Link>
                 <div>
                     <ul className='hidden md:flex '>
                         <Link href='/'>
                             <li className='ml-10 text-sm uppercase hover:border-b'> Home </li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#about">
                             <li className='ml-10 text-sm uppercase hover:border-b'> About </li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#services'>
                             <li className='ml-10 text-sm uppercase hover:border-b'> Services </li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#projects'>
                             <li className='ml-10 text-sm uppercase hover:border-b'> Projects </li>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/#contact'>
                             <li className='ml-10 text-sm uppercase hover:border-b'> Contact </li>
                         </Link>
                     </ul>
@@ -69,19 +87,19 @@ const Navbar = () => {
                     </div>
                     <div className='py-4 flex flex-col'>
                         <ul className='uppercase'>
-                            <Link href='/'>
+                            <Link href='/#home'>
                                 <li className='py-4 text-sm'> Home </li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#about'>
                                 <li className='py-4 text-sm'> About </li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#services'>
                                 <li className='py-4 text-sm'> Services </li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#projects'>
                                 <li className='py-4 text-sm'> Projects </li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#contact'>
                                 <li className='py-4 text-sm'> Contact </li>
                             </Link>
                         </ul>

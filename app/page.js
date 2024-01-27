@@ -27,22 +27,5 @@ export default function Home() {
 
 
 
-// the correct way: 
-// import Head from 'next/head';
-// // other imports
 
-// export default function Home() {
-//   return (
-//     <div>
-//       <Head>
-//         <title>Gopal Drywalls</title>
-//         <meta name="description" content="We do mud tape" />
-//         {/* other head elements */}
-//       </Head>
-
-//       {/* your content */}
-//       <p> Test content</p>
-//     </div>
-//   );
-// }
 

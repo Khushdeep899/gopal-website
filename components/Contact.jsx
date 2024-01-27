@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Contact = () => {
     return (
-        <div className={'w-full lg:h-screen pt-5'}>
+        <div id='contact' className={'w-full lg:h-screen pt-5'}>
             <div className="max-w-[1240px] m-auto px-2 py16 w-full">
                 <p className="text-xl tracking-widest uppercase text-amber-600">
                     Contact
