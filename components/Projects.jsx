@@ -7,6 +7,7 @@ import propertyImg2 from '../public/assets/projects/arbutus1.jpg';
 import propertyImg3 from '../public/assets/projects/bhinder2.png';
 import propertyImg4 from '../public/assets/projects/bhinder1.png';
 
+
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
