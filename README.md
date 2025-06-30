@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Gopal Drywalls Website
 
-The Gopal Drywalls website is a modern, interactive web experience designed to showcase the services of Gopal Drywalls, a local construction company specializing in mud and taping for both residential and commercial projects. This site features a sleek design, intuitive navigation, and detailed project showcases, embodying the company's commitment to quality and precision.
+The Gopal Drywalls website is a modern, interactive web experience designed to showcase services of Gopal Drywalls, a local construction company specializing in mud and taping for both residential and commercial projects. This site features a sleek design, intuitive navigation, and detailed project showcases, embodying the company's commitment to quality and precision.
 
 ## Features
 
